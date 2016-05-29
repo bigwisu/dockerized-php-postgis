@@ -1,0 +1,31 @@
+front:
+  build: .
+  ports:
+    - "80:80"
+  links:
+    - postgis:postgis
+    - memcached:memcached
+  volumes:
+    - ./www:/var/www
+    - ./logs:/var/log/supervisor
+
+postgis:
+  image: kartoza/postgis:9.4-2.1
+  volumes_from:
+    - data
+  ports:
+    - "5432:5432"
+  environment:
+    POSTGRES_USER: gis
+    POSTGRES_PASS: password
+
+data:
+  image: kartoza/postgis:9.4-2.1
+  volumes:
+    - /var/lib/postgresql
+  command: "true"
+
+memcached:
+  image: memcached
+  ports:
+    - "11211:11211"
