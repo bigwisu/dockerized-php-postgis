@@ -11,6 +11,7 @@ RUN apt-get update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive apt-g
 	php5-fpm \
 	php5-gd \
 	php5-memcached \
+	php5-memcache \
 	php5-pgsql \
 	php5-mcrypt \
 	php5-sqlite \
