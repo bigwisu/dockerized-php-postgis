@@ -18,7 +18,6 @@ RUN apt-get update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive apt-g
 	php5-xdebug \
 	php-apc \
 	libapache2-mod-php5 \
-	vim \
 	tcpdump 
 
 # Enable apache mods.
