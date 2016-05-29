@@ -41,8 +41,8 @@ ENV APACHE_PID_FILE /var/run/apache2.pid
 # Expose apache.
 EXPOSE 80
 
-# Update the default apache site with the config we created.
-ADD conf/vhost.conf /etc/apache2/sites-enabled/000-default.conf
+# remove default vhost
+RUN rm -rf /etc/apache2/sites-enabled/*
 
 # By default start up apache in the foreground, override with /bin/bash for interative.
 CMD /usr/sbin/apache2ctl -D FOREGROUND

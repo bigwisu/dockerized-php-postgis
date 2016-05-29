@@ -7,6 +7,7 @@ front:
     - memcached:memcached
   volumes:
     - ./www:/var/www
+    - ./sites:/etc/apache2/sites-enabled
     - ./logs:/var/log/supervisor
 
 postgis:
