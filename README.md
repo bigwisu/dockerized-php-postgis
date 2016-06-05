@@ -22,4 +22,4 @@ That's it! You can now access your configured sites via the IP address of the Do
 
 ## License
 
-Open Source
+MIT

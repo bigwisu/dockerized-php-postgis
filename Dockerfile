@@ -1,4 +1,4 @@
-FROM ubuntu:12.04
+FROM ubuntu:12.04.5
 MAINTAINER Wisu Suntoyo <wisu@devel.web.id>
 
 # Install apache, PHP, and supplimentary programs.
